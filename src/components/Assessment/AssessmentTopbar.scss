@@ -1,0 +1,103 @@
+.assessment-topbar {
+  padding: 16px 24px 22px 24px;
+  background: white;
+  box-shadow: 0 4px 16px #2926400f;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  .top-level-nav {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background-color: #3D2EFF20;
+    color: #3D2EFF;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+
+  .chapter-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    .chapter-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e1e1e1;
+
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        .radial-progress {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+            .chapter {
+                font-size: 24px;
+                font-weight: 600;
+                color: #1F1C1A;
+            }
+        }
+    }
+
+    .chapter-details {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        justify-content: flex-start;
+        text-align: left;
+      .label {
+        color: #3D2EFF;
+        font-size: 14px;
+        text-transform: capitalize;
+        font-weight: 600;
+      }
+      .title {
+        font-size: 20px;
+        color: #1F1C1A;
+        font-weight: 500;
+      }
+      p {
+        margin: 0;
+        color: #1F1C1A;
+        opacity: .7;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .section-progress {
+    margin-top: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .progress-steps {
+      display: flex;
+      gap: 8px;
+      .step {
+        flex: 1;
+        height: 4px;
+        background: #E5E7EB;
+        &.completed {
+          background: #3E2FFF;
+        }
+        &.active {
+          background: #818CF8;
+        }
+      }
+    }
+  }
+} 

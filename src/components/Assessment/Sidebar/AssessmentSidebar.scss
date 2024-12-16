@@ -1,0 +1,55 @@
+.chapter-box {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 12px;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.16);
+    cursor: pointer;
+    width: 300px;
+    box-sizing: border-box;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .label {
+        color: #8D83FF;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .title {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+    .sublabel {
+        color: white;
+        opacity: .4;
+        font-weight: 400;
+        font-size: 12px;
+    }
+    .section-title {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 400;
+        &.completed {
+            color: #00BD79;
+        }
+    }
+    &.selected {
+        background-color: white;
+        .label {
+            color: #3D2EFF;
+        }
+        .title {
+            color: #1F1C1A;
+        }
+        .sublabel {
+            color: #1F1C1A;
+            opacity: .6;
+        }
+        .section-title {
+            color: #1f1c1aaf;
+        }
+    }
+}
