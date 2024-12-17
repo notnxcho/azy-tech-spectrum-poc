@@ -31,7 +31,7 @@ const questionBankInitial = [
           }
         ]
       },
-      {
+     {
         id: 2,
         type: 'section',
         title: 'Operational details',
@@ -52,7 +52,117 @@ const questionBankInitial = [
             answer: undefined
           }
         ]
-      }
+      },
+      {
+        id: 3,
+        type: 'section',
+        title: 'Operational details',
+        questions: [
+          {
+            id: 1,
+            text: 'What is the range of operation?',
+            answer: undefined
+          },
+          {
+            id: 2,
+            text: 'What is the operative cost?',
+            answer: undefined
+          },
+          {
+            id: 3,
+            text: 'What training does someone require to operate?',
+            answer: undefined
+          }
+        ]
+      },
+      {
+        id: 4,
+        type: 'section',
+        title: 'Operational details',
+        questions: [
+          {
+            id: 1,
+            text: 'What is the range of operation?',
+            answer: undefined
+          },
+          {
+            id: 2,
+            text: 'What is the operative cost?',
+            answer: undefined
+          },
+          {
+            id: 3,
+            text: 'What training does someone require to operate?',
+            answer: undefined
+          }
+        ]
+      },
+      {
+        id: 5,
+        type: 'section',
+        title: 'Operational details',
+        questions: [
+          {
+            id: 1,
+            text: 'What is the range of operation?',
+            answer: undefined
+          },
+          {
+            id: 2,
+            text: 'What is the operative cost?',
+            answer: undefined
+          },
+          {
+            id: 3,
+            text: 'What training does someone require to operate?',
+            answer: undefined
+          }
+        ]
+      },
+      {
+        id: 6,
+        type: 'section',
+        title: 'Operational details',
+        questions: [
+          {
+            id: 1,
+            text: 'What is the range of operation?',
+            answer: undefined
+          },
+          {
+            id: 2,
+            text: 'What is the operative cost?',
+            answer: undefined
+          },
+          {
+            id: 3,
+            text: 'What training does someone require to operate?',
+            answer: undefined
+          }
+        ]
+      },
+      {
+        id: 7,
+        type: 'section',
+        title: 'Operational details',
+        questions: [
+          {
+            id: 1,
+            text: 'What is the range of operation?',
+            answer: undefined
+          },
+          {
+            id: 2,
+            text: 'What is the operative cost?',
+            answer: undefined
+          },
+          {
+            id: 3,
+            text: 'What training does someone require to operate?',
+            answer: undefined
+          }
+        ]
+      },
     ]
   },
   {
@@ -148,7 +258,7 @@ const AssessmentDemo = () => {
   const [currentSection, setCurrentSection] = useState(1)
   const [currentQuestion, setCurrentQuestion] = useState(1)
   const [focusedLayer, setFocusedLayer] = useState('chapter')
-  console.log(completionStatus, 'el completion status')
+  const [relativePosition, setRelativePosition] = useState({x: 0, y: 0})
 
   return (
     <div className="assessment-container">
@@ -172,12 +282,13 @@ const AssessmentDemo = () => {
         <div className={`sections-grid ${focusedLayer!== 'chapter' ? 'question-grid' : ''}`}>
           {questionBank[currentChapter-1].sections.map((section, index) => {
             return (
-              <SectionCard 
+              <SectionCard
                 section={section} 
                 index={index} 
                 completionStatus={completionStatus[currentChapter-1].sections[currentSection-1].questions}
                 setFocusedLayer={setFocusedLayer}
                 changeSection={changeSection}
+                setRelativePosition={setRelativePosition}
               /> 
             )
           })}
@@ -187,6 +298,7 @@ const AssessmentDemo = () => {
               currentQuestion={currentQuestion} 
               setCurrentQuestion={setCurrentQuestion}
               focusedLayer={focusedLayer}
+              relativePosition={relativePosition}
             />
           }
         </div>

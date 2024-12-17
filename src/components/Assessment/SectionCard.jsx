@@ -1,8 +1,18 @@
-const SectionCard = ({section, index, completionStatus, setFocusedLayer, changeSection}) => {
-    const handleClick = () => {
-        setFocusedLayer('section')
-        changeSection(section.id)
+const SectionCard = ({section, index, completionStatus, setFocusedLayer, changeSection, setRelativePosition}) => {
+    const handleClick = (event) => {
+        const parent = event.currentTarget.parentElement
+        const rect = event.currentTarget.getBoundingClientRect()
+        const parentRect = parent.getBoundingClientRect()
+        const relativeX = rect.left - parentRect.left
+        const relativeY = rect.top - parentRect.top
+        setRelativePosition({x: relativeX, y: Math.round(relativeY + 3)})
+        setTimeout(()=>{
+            setFocusedLayer('section')
+            changeSection(section.id)
+        }, 5)
+        
     }
+
     return (
         <div className="section-card" onClick={handleClick}>
             <div className="label">
