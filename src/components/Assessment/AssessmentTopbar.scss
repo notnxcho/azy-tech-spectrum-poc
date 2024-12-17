@@ -90,13 +90,13 @@
       .step {
         flex: 1;
         height: 4px;
-        background: #E5E7EB;
-        &.completed {
-          background: #3E2FFF;
-        }
+        background: #3D2EFF20;
         &.active {
-          background: #818CF8;
+          background: #3D2EFF4a;
         }
+        &.completed {
+            background: #3E2FFF;
+          }
       }
     }
   }

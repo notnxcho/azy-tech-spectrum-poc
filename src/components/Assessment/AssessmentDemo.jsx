@@ -74,6 +74,7 @@ const AssessmentDemo = () => {
             focusedLayer={focusedLayer}
             setFocusedLayer={setFocusedLayer}
             completionStatus={completionStatus}
+            currentQuestion={currentQuestion}
           />
           <div className={`sections-grid ${focusedLayer!== 'chapter' ? 'question-grid' : ''}`}>
             {questionBank[currentChapter].sections.map((section, index) => {

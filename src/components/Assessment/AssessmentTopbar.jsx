@@ -2,7 +2,7 @@ import { useState } from 'react'
 import "./AssessmentTopbar.scss"
 import SectionalProgressbar from './SectionalProgressbar'
 
-const AssessmentTopbar = ({questionBank, setQuestionBank, currentChapter, currentSection, focusedLayer, setFocusedLayer, completionStatus}) => {
+const AssessmentTopbar = ({questionBank, setQuestionBank, currentChapter, currentSection, focusedLayer, setFocusedLayer, completionStatus, currentQuestion}) => {
     const calculateString = () => {
         const primary = "#3D2EFF"
         let res = `${primary} 0deg`
@@ -13,6 +13,8 @@ const AssessmentTopbar = ({questionBank, setQuestionBank, currentChapter, curren
         }
         return(res)
     }
+
+    
   return (
     <div className="assessment-topbar">
       <div className="chapter-info">
@@ -30,7 +32,7 @@ const AssessmentTopbar = ({questionBank, setQuestionBank, currentChapter, curren
           <p>Agnostic to uses and domains, general information about the technology.</p>
         </div>
       </div>
-      <SectionalProgressbar steps={focusedLayer === 'chapter' ? completionStatus[currentChapter]?.sections : completionStatus[currentChapter]?.sections[currentSection]?.questions}/>
+      <SectionalProgressbar steps={focusedLayer === 'chapter' ? completionStatus[currentChapter]?.sections : completionStatus[currentChapter]?.sections[currentSection]?.questions} currentQuestion={currentQuestion} focusedLayer={focusedLayer}/>
       {focusedLayer==='section' && <div className='top-level-nav' onClick={()=>setFocusedLayer('chapter')}>See top-level breakdown</div>}
     </div>
   )
