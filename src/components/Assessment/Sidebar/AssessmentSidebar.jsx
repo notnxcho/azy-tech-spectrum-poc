@@ -1,7 +1,9 @@
+import { useQuestionBank } from "../QuestionBankContext";
 import "./AssessmentSidebar.scss"
 import ChapterBox from "./ChapterBox"
 
-const AssessmentSidebar = ({currentChapter, changeChapter, questionBank, completionStatus, focusedLayer}) => {
+const AssessmentSidebar = ({ currentChapter, changeChapter, completionStatus, focusedLayer }) => {
+    const { questionBank } = useQuestionBank();
     return <div className={`assessment-sidebar ${focusedLayer === 'chapter' ? '' : 'hide'}`}>
         <div className="header">
             <div className="label">New Rapid</div>
@@ -9,7 +11,7 @@ const AssessmentSidebar = ({currentChapter, changeChapter, questionBank, complet
             <div className="sublabel">Select to access content</div>
         </div>
         {questionBank.map( (chap, index) => {
-            return <ChapterBox key={chap.id} chapter={chap} currentChapter={currentChapter} changeChapter={changeChapter} completionStatus={completionStatus[index]}/>
+            return <ChapterBox key={index + chap.title} chapter={chap} currentChapter={currentChapter} changeChapter={changeChapter} completionStatus={completionStatus[index]}/>
         })}
     </div>
 }

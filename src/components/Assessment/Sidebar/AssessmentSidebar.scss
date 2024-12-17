@@ -50,6 +50,9 @@
         }
         .section-title {
             color: #1f1c1aaf;
+            &.completed {
+                color: #00BD79;
+            }
         }
     }
 }

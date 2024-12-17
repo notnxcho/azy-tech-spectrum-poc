@@ -8,7 +8,7 @@ const AssessmentTopbar = ({questionBank, setQuestionBank, currentChapter, curren
         let res = `${primary} 0deg`
         if (focusedLayer === 'chapter') {
             completionStatus.forEach((step, index) => {
-                res+=(`, ${index < currentChapter ? primary : (primary+'00')} ${(index+1) * (360/completionStatus.length) - 20}deg, ${primary}${index < (currentChapter - 1) ? '' : '00'} ${(index+1) * (360/completionStatus.length) + 10}deg`)
+                res+=(`, ${index < (currentChapter + 1) ? primary : (primary+'00')} ${(index+1) * (360/completionStatus.length) - 20}deg, ${primary}${index < (currentChapter) ? '' : '00'} ${(index+1) * (360/completionStatus.length) + 10}deg`)
             })
         }
         return(res)
@@ -21,16 +21,16 @@ const AssessmentTopbar = ({questionBank, setQuestionBank, currentChapter, curren
             style={{backgroundImage: `conic-gradient(${calculateString()})`}}
         >
           <div className="radial-progress">
-            <span className="chapter">{currentChapter}</span>
+            <span className="chapter">{currentChapter + 1}</span>
           </div>
         </div>
         <div className="chapter-details">
           <span className="label">Current {focusedLayer}</span>
-          <div className='title'>{focusedLayer === 'chapter' ? questionBank[currentChapter - 1]?.title : questionBank[currentChapter - 1]?.sections[currentSection - 1].title }</div>
+          <div className='title'>{focusedLayer === 'chapter' ? questionBank[currentChapter]?.title : questionBank[currentChapter]?.sections[currentSection].title }</div>
           <p>Agnostic to uses and domains, general information about the technology.</p>
         </div>
       </div>
-      <SectionalProgressbar steps={focusedLayer === 'chapter' ? completionStatus[currentChapter - 1]?.sections : completionStatus[currentChapter - 1]?.sections[currentSection - 1]?.questions}/>
+      <SectionalProgressbar steps={focusedLayer === 'chapter' ? completionStatus[currentChapter]?.sections : completionStatus[currentChapter]?.sections[currentSection]?.questions}/>
       {focusedLayer==='section' && <div className='top-level-nav' onClick={()=>setFocusedLayer('chapter')}>See top-level breakdown</div>}
     </div>
   )

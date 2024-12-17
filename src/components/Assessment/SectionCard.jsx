@@ -12,7 +12,6 @@ const SectionCard = ({section, index, completionStatus, setFocusedLayer, changeS
         }, 5)
         
     }
-
     return (
         <div className="section-card" onClick={handleClick}>
             <div className="label">
