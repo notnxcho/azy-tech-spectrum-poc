@@ -55,6 +55,13 @@ const AssessmentDemo = () => {
     setQuestionBank(updatedQuestionBank)
   }
 
+  const handleNextSection = () => {
+    if (questionBank[currentChapter].sections.length - 1 > currentSection) {
+      currentQuestion(0)
+      currentSection(currentSection + 1)
+    }
+  }
+
   return (
     <div className="assessment-container">
       <AssessmentSidebar 
@@ -98,6 +105,7 @@ const AssessmentDemo = () => {
                 focusedLayer={focusedLayer}
                 relativePosition={relativePosition}
                 updateQuestionAnswer={updateQuestionAnswer}
+                handleNextSection={handleNextSection}
               />
             }
           </div>

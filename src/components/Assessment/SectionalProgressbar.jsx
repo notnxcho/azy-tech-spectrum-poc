@@ -1,7 +1,6 @@
 import "./AssessmentTopbar.scss"
 
 const SectionalProgressbar = ({ steps, currentQuestion, focusedLayer }) => {
-    console.log(steps)
     return (
         <div className="section-progress">
             <div className="progress-steps">

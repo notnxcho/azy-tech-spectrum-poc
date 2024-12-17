@@ -10,8 +10,11 @@ const QuestionCardContainer = ({questions, currentQuestion, setCurrentQuestion, 
     const handleNextQuestion = () => {
         updateQuestionAnswer(currentQuestion, answer)
         if (currentQuestion < questions.length - 1) {
+            console.log('chupete')
             setCurrentQuestion(currentQuestion + 1)
             setAnswer(questions[currentQuestion + 1].answer || '')
+        } else {
+            
         }
     }
 

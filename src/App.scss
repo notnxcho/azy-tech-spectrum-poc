@@ -303,7 +303,8 @@
   .question-wrap {
     display: flex;
     flex-direction: column;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     gap: 12px;
     flex-grow: 1;
     .label {

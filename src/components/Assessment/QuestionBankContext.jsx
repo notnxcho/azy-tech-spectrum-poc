@@ -181,7 +181,7 @@ const questionBankInitial = [
             },
             {
               id: 1,
-              text: 'What is the maximum temperature it can whitstand?',
+              text: 'What is the minimum temperature it can whitstand?',
               answer: undefined
             },
             {

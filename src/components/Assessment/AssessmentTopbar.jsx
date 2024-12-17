@@ -10,6 +10,10 @@ const AssessmentTopbar = ({questionBank, setQuestionBank, currentChapter, curren
             completionStatus.forEach((step, index) => {
                 res+=(`, ${index < (currentChapter + 1) ? primary : (primary+'00')} ${(index+1) * (360/completionStatus.length) - 20}deg, ${primary}${index < (currentChapter) ? '' : '00'} ${(index+1) * (360/completionStatus.length) + 10}deg`)
             })
+        } else {
+            completionStatus[currentChapter].sections.forEach((step, index) => {
+                res+=(`, ${index < (currentSection + 1) ? primary : (primary+'00')} ${(index+1) * (360/completionStatus.length) - 20}deg, ${primary}${index < (currentSection) ? '' : '00'} ${(index+1) * (360/completionStatus.length) + 10}deg`)
+            })
         }
         return(res)
     }
@@ -23,7 +27,7 @@ const AssessmentTopbar = ({questionBank, setQuestionBank, currentChapter, curren
             style={{backgroundImage: `conic-gradient(${calculateString()})`}}
         >
           <div className="radial-progress">
-            <span className="chapter">{currentChapter + 1}</span>
+            <span className="chapter">{focusedLayer==='chapter' ? currentChapter + 1 : currentSection + 1}</span>
           </div>
         </div>
         <div className="chapter-details">
