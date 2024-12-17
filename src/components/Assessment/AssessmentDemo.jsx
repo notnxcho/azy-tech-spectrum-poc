@@ -269,38 +269,40 @@ const AssessmentDemo = () => {
         completionStatus={completionStatus}
         focusedLayer={focusedLayer}
       />
-      <div className="assessment-main">
-        <AssessmentTopbar 
-          questionBank={questionBank} 
-          setQuestionBank={setQuestionBank} 
-          currentChapter={currentChapter} 
-          currentSection={currentSection} 
-          focusedLayer={focusedLayer}
-          setFocusedLayer={setFocusedLayer}
-          completionStatus={completionStatus}
-        />
-        <div className={`sections-grid ${focusedLayer!== 'chapter' ? 'question-grid' : ''}`}>
-          {questionBank[currentChapter-1].sections.map((section, index) => {
-            return (
-              <SectionCard
-                section={section} 
-                index={index} 
-                completionStatus={completionStatus[currentChapter-1].sections[currentSection-1].questions}
-                setFocusedLayer={setFocusedLayer}
-                changeSection={changeSection}
-                setRelativePosition={setRelativePosition}
-              /> 
-            )
-          })}
-          {
-            <QuestionCardContainer 
-              questions={questionBank[currentChapter-1].sections[currentSection-1].questions} 
-              currentQuestion={currentQuestion} 
-              setCurrentQuestion={setCurrentQuestion}
-              focusedLayer={focusedLayer}
-              relativePosition={relativePosition}
-            />
-          }
+      <div className="assessment-main-wrap">
+        <div className="assessment-main">
+          <AssessmentTopbar 
+            questionBank={questionBank} 
+            setQuestionBank={setQuestionBank} 
+            currentChapter={currentChapter} 
+            currentSection={currentSection} 
+            focusedLayer={focusedLayer}
+            setFocusedLayer={setFocusedLayer}
+            completionStatus={completionStatus}
+          />
+          <div className={`sections-grid ${focusedLayer!== 'chapter' ? 'question-grid' : ''}`}>
+            {questionBank[currentChapter-1].sections.map((section, index) => {
+              return (
+                <SectionCard
+                  section={section} 
+                  index={index} 
+                  completionStatus={completionStatus[currentChapter-1].sections[currentSection-1].questions}
+                  setFocusedLayer={setFocusedLayer}
+                  changeSection={changeSection}
+                  setRelativePosition={setRelativePosition}
+                /> 
+              )
+            })}
+            {
+              <QuestionCardContainer 
+                questions={questionBank[currentChapter-1].sections[currentSection-1].questions} 
+                currentQuestion={currentQuestion} 
+                setCurrentQuestion={setCurrentQuestion}
+                focusedLayer={focusedLayer}
+                relativePosition={relativePosition}
+              />
+            }
+          </div>
         </div>
       </div>
     </div>
