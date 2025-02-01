@@ -52,116 +52,116 @@ const questionBankInitial = [
             }
           ]
         },
-        // {
-        //   id: 2,
-        //   type: 'section',
-        //   title: 'Operational details',
-        //   questions: [
-        //     {
-        //       id: 0,
-        //       text: 'What is the range of operation?',
-        //       answer: undefined
-        //     },
-        //     {
-        //       id: 1,
-        //       text: 'What is the operative cost?',
-        //       answer: undefined
-        //     },
-        //     {
-        //       id: 2,
-        //       text: 'What training does someone require to operate?',
-        //       answer: undefined
-        //     }
-        //   ]
-        // },
-        // {
-        //   id: 4,
-        //   type: 'section',
-        //   title: 'Operational details',
-        //   questions: [
-        //     {
-        //       id: 0,
-        //       text: 'What is the range of operation?',
-        //       answer: undefined
-        //     },
-        //     {
-        //       id: 1,
-        //       text: 'What is the operative cost?',
-        //       answer: undefined
-        //     },
-        //     {
-        //       id: 2,
-        //       text: 'What training does someone require to operate?',
-        //       answer: undefined
-        //     }
-        //   ]
-        // },
-        // {
-        //   id: 5,
-        //   type: 'section',
-        //   title: 'Operational details',
-        //   questions: [
-        //     {
-        //       id: 0,
-        //       text: 'What is the range of operation?',
-        //       answer: undefined
-        //     },
-        //     {
-        //       id: 1,
-        //       text: 'What is the operative cost?',
-        //       answer: undefined
-        //     },
-        //     {
-        //       id: 2,
-        //       text: 'What training does someone require to operate?',
-        //       answer: undefined
-        //     }
-        //   ]
-        // },
-        // {
-        //   id: 6,
-        //   type: 'section',
-        //   title: 'Operational details',
-        //   questions: [
-        //     {
-        //       id: 0,
-        //       text: 'What is the range of operation?',
-        //       answer: undefined
-        //     },
-        //     {
-        //       id: 1,
-        //       text: 'What is the operative cost?',
-        //       answer: undefined
-        //     },
-        //     {
-        //       id: 2,
-        //       text: 'What training does someone require to operate?',
-        //       answer: undefined
-        //     }
-        //   ]
-        // },
-        // {
-        //   id: 7,
-        //   type: 'section',
-        //   title: 'Operational details',
-        //   questions: [
-        //     {
-        //       id: 0,
-        //       text: 'What is the range of operation?',
-        //       answer: undefined
-        //     },
-        //     {
-        //       id: 1,
-        //       text: 'What is the operative cost?',
-        //       answer: undefined
-        //     },
-        //     {
-        //       id: 2,
-        //       text: 'What training does someone require to operate?',
-        //       answer: undefined
-        //     }
-        //   ]
-        // },
+        {
+          id: 2,
+          type: 'section',
+          title: 'Operational details',
+          questions: [
+            {
+              id: 0,
+              text: 'What is the range of operation?',
+              answer: undefined
+            },
+            {
+              id: 1,
+              text: 'What is the operative cost?',
+              answer: undefined
+            },
+            {
+              id: 2,
+              text: 'What training does someone require to operate?',
+              answer: undefined
+            }
+          ]
+        },
+        {
+          id: 3,
+          type: 'section',
+          title: 'Operational details',
+          questions: [
+            {
+              id: 0,
+              text: 'What is the range of operation?',
+              answer: undefined
+            },
+            {
+              id: 1,
+              text: 'What is the operative cost?',
+              answer: undefined
+            },
+            {
+              id: 2,
+              text: 'What training does someone require to operate?',
+              answer: undefined
+            }
+          ]
+        },
+        {
+          id: 4,
+          type: 'section',
+          title: 'Operational details',
+          questions: [
+            {
+              id: 0,
+              text: 'What is the range of operation?',
+              answer: undefined
+            },
+            {
+              id: 1,
+              text: 'What is the operative cost?',
+              answer: undefined
+            },
+            {
+              id: 2,
+              text: 'What training does someone require to operate?',
+              answer: undefined
+            }
+          ]
+        },
+        {
+          id: 5,
+          type: 'section',
+          title: 'Operational details',
+          questions: [
+            {
+              id: 0,
+              text: 'What is the range of operation?',
+              answer: undefined
+            },
+            {
+              id: 1,
+              text: 'What is the operative cost?',
+              answer: undefined
+            },
+            {
+              id: 2,
+              text: 'What training does someone require to operate?',
+              answer: undefined
+            }
+          ]
+        },
+        {
+          id: 6,
+          type: 'section',
+          title: 'Operational details',
+          questions: [
+            {
+              id: 0,
+              text: 'What is the range of operation?',
+              answer: undefined
+            },
+            {
+              id: 1,
+              text: 'What is the operative cost?',
+              answer: undefined
+            },
+            {
+              id: 2,
+              text: 'What training does someone require to operate?',
+              answer: undefined
+            }
+          ]
+        },
       ]
     },
     {
