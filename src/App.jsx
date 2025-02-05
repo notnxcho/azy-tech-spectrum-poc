@@ -4,6 +4,7 @@ import ChartDemo from './components/ChartDemo'
 import Home from './components/Home'
 import AssessmentDemo from './components/Assessment/AssessmentDemo'
 import { QuestionBankProvider } from './components/Assessment/QuestionBankContext';
+import DomainMappedChartDemo from './components/DomainMappedChartDemo'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <QuestionBankProvider>
           <Routes>
             <Route path="/chart" element={<ChartDemo />} />
+            <Route path="/domainchart" element={<DomainMappedChartDemo />} />
             <Route path="/assessment" element={<AssessmentDemo />} />
             <Route path="/" element={<Home />} />
           </Routes>
