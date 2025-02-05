@@ -407,19 +407,56 @@
       display: flex;
       flex-direction: column;
       position: relative;
-      padding: 12px 0px;
-      gap: 16px;
+      padding: 8px 0px;
+      gap: 4px;
       .use-row {
         display: grid;
         grid-template-columns: repeat(10, minmax(0px, 1fr));
         gap: 4px;
         z-index: 2;
+        transition: padding 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), background-color .6s ease-out;
+        cursor: pointer;
+        padding: 6px 0px;
+        &:hover {
+          background-color: #00000008;
+          padding: 0px;
+          .score-bar {
+            background-image: unset;
+            height: 36px;
+            .tooltip {
+              opacity: 1;
+              left: 4px;
+            }
+          }
+          .score-number {
+            font-weight: 600;
+          }
+        }
       }
       .score-bar {
         display: flex;
         position: relative;
         border-radius: 4px;
         height: 24px;
+        background-image: linear-gradient(-90deg, #ffffff00 0%, #ffffffaa 100%);
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        .tooltip {
+          position: relative;
+          color: white;
+          font-size: 14px;
+          padding: 4px 6px;
+          border-radius: 4px;
+          background-color: #1F1C1Ac0;
+          box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.06);
+          position: absolute;
+          transform: translateY(-50%);
+          top: 50%;
+          left: -8px;
+          min-width: max-content;
+          max-width: 380px;
+          opacity: 0;
+          transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
       }
       .score-number {
         grid-column: 10;

@@ -38,7 +38,9 @@ const DomainMappedChartDemo = () => {
                             {domain.uses.map((use)=> {
                                 return (
                                     <div className='use-row'>
-                                        <div className='score-bar' style={{gridColumn: `1 / ${use.score + 1}`, background: `${use.color}aa`, backgroundImage: `linear-gradient(-90deg, #ffffff00 0%, #ffffffaa 100%)`}}/>
+                                        <div className='score-bar' style={{gridColumn: `1 / ${use.score + 1}`, backgroundColor: `${use.color}aa`}}>
+                                            <div className="tooltip">{use.name}</div>
+                                        </div>
                                         <div className='score-number' style={{color: use.color}}>{use.score}</div>
                                     </div>
                                 )
